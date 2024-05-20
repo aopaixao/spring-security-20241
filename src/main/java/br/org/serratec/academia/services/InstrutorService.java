@@ -1,12 +1,12 @@
-package com.Grupo3.API.services;
+package br.org.serratec.academia.services;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.Grupo3.API.entities.Instrutor;
-import com.Grupo3.API.repositories.InstrutorRepository;
+import br.org.serratec.academia.entities.Instrutor;
+import br.org.serratec.academia.repositories.InstrutorRepository;
 
 @Service
 public class InstrutorService {

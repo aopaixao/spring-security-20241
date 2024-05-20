@@ -1,4 +1,4 @@
-package com.Grupo3.API.entities;
+package br.org.serratec.academia.entities;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;

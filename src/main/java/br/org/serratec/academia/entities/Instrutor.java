@@ -1,4 +1,4 @@
-package com.Grupo3.API.entities;
+package br.org.serratec.academia.entities;
 
 import java.util.List;
 

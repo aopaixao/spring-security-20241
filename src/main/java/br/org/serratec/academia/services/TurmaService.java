@@ -1,12 +1,12 @@
-package com.Grupo3.API.services;
+package br.org.serratec.academia.services;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.Grupo3.API.entities.Turma;
-import com.Grupo3.API.repositories.TurmaRepository;
+import br.org.serratec.academia.entities.Turma;
+import br.org.serratec.academia.repositories.TurmaRepository;
 
 @Service
 public class TurmaService {

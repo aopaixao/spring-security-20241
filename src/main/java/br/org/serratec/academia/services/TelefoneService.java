@@ -1,12 +1,12 @@
-package com.Grupo3.API.services;
+package br.org.serratec.academia.services;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.Grupo3.API.entities.Telefone;
-import com.Grupo3.API.repositories.TelefoneRepository;
+import br.org.serratec.academia.entities.Telefone;
+import br.org.serratec.academia.repositories.TelefoneRepository;
 
 @Service
 public class TelefoneService {

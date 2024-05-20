@@ -1,4 +1,4 @@
-package com.Grupo3.API.controllers;
+package br.org.serratec.academia.controllers;
 
 import java.util.List;
 
@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.Grupo3.API.entities.Turma;
-import com.Grupo3.API.services.TurmaService;
+import br.org.serratec.academia.entities.Turma;
+import br.org.serratec.academia.services.TurmaService;
 
 @RestController
 @RequestMapping("/turmas")

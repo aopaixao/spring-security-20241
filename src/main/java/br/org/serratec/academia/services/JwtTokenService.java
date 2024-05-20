@@ -5,6 +5,8 @@ import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.Date;
 
+import org.springframework.stereotype.Service;
+
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTCreationException;
@@ -12,6 +14,7 @@ import com.auth0.jwt.exceptions.JWTVerificationException;
 
 import br.org.serratec.academia.entities.UserDetailsImpl;
 
+@Service
 public class JwtTokenService {
 	private static final String SECRET_KEY = "asdfSFS34wfsdfsdfSDSD32dfsddDDerQSNCK34SOWEK5354fdgdf4";  
 

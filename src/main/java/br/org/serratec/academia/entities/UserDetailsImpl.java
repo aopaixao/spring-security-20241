@@ -7,11 +7,27 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class UserDetailsImpl implements UserDetails {
 	private static final long serialVersionUID = 1L;
 	private User user;
 	private Integer id;
+	private String username;
 	private String email;
+	@JsonIgnore
+	private String password;
+
+	private Collection<? extends GrantedAuthority> authorities;
+
+	public UserDetailsImpl(Integer id, String username, String email, String password,
+			Collection<? extends GrantedAuthority> authorities) {
+		this.id = id;
+		this.username = username;
+		this.email = email;
+		this.password = password;
+		this.authorities = authorities;
+	}	
 
 	public UserDetailsImpl(User user) {
 		this.user = user;
@@ -26,23 +42,21 @@ public class UserDetailsImpl implements UserDetails {
 		return user.getRoles().stream().map(role -> new SimpleGrantedAuthority(role.getName().name()))
 				.collect(Collectors.toList());
 	}
+	
+	
+
+	public User getUser() {
+		return user;
+	}
 
 	public Integer getId() {
 		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
 	}
 
 	public String getEmail() {
 		return email;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	
 	@Override
 	public String getPassword() {
 		return user.getPassword();

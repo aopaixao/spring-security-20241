@@ -34,8 +34,13 @@ public class User {
 	public User() {
 	}
 
+	public User(String email, String password, List<Role> roles) {
+		this.email = email;
+		this.password = password;
+		this.roles = roles;
+	}
+
 	public User(Integer id, String email, String password, List<Role> roles) {
-		super();
 		this.id = id;
 		this.email = email;
 		this.password = password;

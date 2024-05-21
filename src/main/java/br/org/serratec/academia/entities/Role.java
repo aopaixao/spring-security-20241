@@ -43,4 +43,6 @@ public class Role {
 	public void setName(RoleEnum name) {
 		this.name = name;
 	}
+	
+	
 }
